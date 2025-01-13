@@ -1,0 +1,41 @@
+---
+- name: "Apache installation using Docker on DEBIAN Ubuntu"
+  hosts: prod
+  become: true
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+  vars_files:
+    - files/secrets/credentials.vault
+  pre_tasks:
+   - name: Install EPEL repo
+     package: 
+       name: "{{ item }}"
+       state: present
+     loop:
+        - git
+        - wget
+   - name: Install prerequisites for Docker
+     package:
+       name:
+         - python3
+         - python3-pip            
+       state: present
+
+   - name: Install Docker module for Python
+     pip:
+       name: docker
+       executable: pip3
+
+  tasks:
+    - name: Copy website file template
+      template:
+        src: index.html.j2
+        dest: /home/vagrant/index.html
+    - name: Create Apache container using Docker
+      docker_container:
+        name: webapp
+        image: httpd
+        ports:
+          - "80:80"
+        volumes: 
+         - /home/vagrant/index.html:/usr/local/apache2/htdocs/index.html

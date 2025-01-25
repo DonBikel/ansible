@@ -2,12 +2,16 @@
 # YAML documents begin with the document separator ---
 - hosts: prod
   become: true
+    # Vars: variables that will apply to the play, on all target systems
+  vars_files:
+    #- vars/logos.yaml
+    - files/secrets/credentials.vault
   roles:
     # Le rôle Nginx doit être exécuté en premier
     - role: nginx
     
     # Démarrer la deuxième instance de webapp
-    - role: <FIX IT>
+    - role: webapp
       vars:
         container_name: "webapp1"
         app_port: 8082

@@ -1,2 +1,8 @@
 ---
 # handlers file for webapp
+# Handlers: the list of handlers that are executed as a notify key from a task
+#  handlers:
+#    - name: Check HTTP Service
+ #     uri:
+  #      url: http://{{ ansible_default_ipv4.address }}
+   #     status_code: 200 

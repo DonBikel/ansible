@@ -1,7 +1,7 @@
 galaxy_info:
-  author: your name
-  description: your role description
-  company: your company (optional)
+  author: Bikel KEUEMEKA
+  description: IT engineer
+  company: BK-ENGINEERING
 
   # If the issue tracker for your role is not on github, uncomment the
   # next line and provide a value
@@ -48,6 +48,6 @@ galaxy_info:
     #       Maximum 20 tags per role.
 
 dependencies:
-  -  <FIX IT> 
+  -  nginx
   # List your role dependencies here, one per line. Be sure to remove the '[]' above,
   # if you add dependencies to this list.

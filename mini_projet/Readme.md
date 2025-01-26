@@ -12,8 +12,15 @@ Ce projet consiste en deux étapes pour déployer une application à l'aide d'An
 
 ### Étapes à suivre
 
-1. **Naviguer dans le répertoire `app-init` du dépôt.**
+1. **Naviguer dans le répertoire `app-init` du dépôt.** :
+   - cd ./app-init
+
 2. Utiliser le playbook pour déployer l'application du client :
+   - ansible-playbook -i hosts.yml --ask-vault-pass nginx_playbook.yaml
+   - tapez le mot de passe d'accès à la clé crypté (vagrant)
+     Vous devriez abtenir un resultat similaire à celui-ci :
+     ![image](https://github.com/user-attachments/assets/a183982b-9b72-431c-9553-3939b51ccd36)
+
 3. Vérifier que l'application est disponible :
    - Utilisez un navigateur web ou une commande curl pour vérifier que l'application est accessible à l'adresse spécifiée.
 
@@ -21,17 +28,14 @@ Ce projet consiste en deux étapes pour déployer une application à l'aide d'An
 
 ### Étapes à suivre
 
-1. Naviguer dans le répertoire app-template du dépôt.
-2. Compléter les fichiers de configuration :
+1. Naviguer dans le répertoire app-template du dépôt :
+  - cd ./app-template
 
-    - Remplacez les expressions <FIX IT> par les valeurs appropriées dans les fichiers de rôle pour l'application et Nginx.
-    - Assurez-vous que les configurations Ansible pour Docker et Nginx sont correctement définies.
-    - Redigez entièrement le contenu du fichier webapp/task/main.yml afin de deployer l'application conteneuriser en utilisant le proxy nginx
-      
-3. Lancer le playbook pour déployer l'application
+2. Utiliser le playbook pour déployer l'application :
+  - ansible-playbook -i hosts.yml --ask-vault-pass nginx_webapp_playbook.yaml 
+    Vous devriez abtenir un resultat similaire à celui-ci :
+    ![image](https://github.com/user-attachments/assets/69b2852d-c55a-4bc5-9cb1-028512e2dc44)
 
-### Vérification
-
-Partie 1 : L'application doit être accessible après le déploiement avec un simple playbook.
-
-Partie 2 : L'application doit être accessible via un proxy Nginx dans un conteneur Docker après avoir complété les fichiers et lancé le playbook.
+3. Vérifier que l'application est disponible :
+   - Utilisez un navigateur web ou une commande curl pour vérifier que l'application est accessible à l'adresse spécifiée.
+  

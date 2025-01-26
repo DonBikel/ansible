@@ -19,6 +19,7 @@ Ce projet consiste en deux étapes pour déployer une application à l'aide d'An
    - ansible-playbook -i hosts.yml --ask-vault-pass nginx_playbook.yaml
    - tapez le mot de passe d'accès à la clé crypté (vagrant)
      Vous devriez abtenir un resultat similaire à celui-ci :
+     
      ![image](https://github.com/user-attachments/assets/a183982b-9b72-431c-9553-3939b51ccd36)
 
 3. Vérifier que l'application est disponible :
@@ -34,6 +35,7 @@ Ce projet consiste en deux étapes pour déployer une application à l'aide d'An
 2. Utiliser le playbook pour déployer l'application :
   - ansible-playbook -i hosts.yml --ask-vault-pass nginx_webapp_playbook.yaml 
     Vous devriez abtenir un resultat similaire à celui-ci :
+    
     ![image](https://github.com/user-attachments/assets/69b2852d-c55a-4bc5-9cb1-028512e2dc44)
 
 3. Vérifier que l'application est disponible :

@@ -22,8 +22,15 @@ Ce projet consiste en deux étapes pour déployer une application à l'aide d'An
      
      ![image](https://github.com/user-attachments/assets/a183982b-9b72-431c-9553-3939b51ccd36)
 
+  - côté client :
+
+    ![image](https://github.com/user-attachments/assets/5fd6e646-e415-4a01-a530-a5572306c962)
+
 3. Vérifier que l'application est disponible :
    - Utilisez un navigateur web ou une commande curl pour vérifier que l'application est accessible à l'adresse spécifiée.
+  
+     ![image](https://github.com/user-attachments/assets/894b30e5-e600-4b5f-9f52-1a6568c76676)
+
 
 ## Partie 2 : Déploiement de l'Application en Conteneur avec Docker et Nginx en utilisant les rôles ansible
 
@@ -38,6 +45,9 @@ Ce projet consiste en deux étapes pour déployer une application à l'aide d'An
     
     ![image](https://github.com/user-attachments/assets/69b2852d-c55a-4bc5-9cb1-028512e2dc44)
 
+
 3. Vérifier que l'application est disponible :
    - Utilisez un navigateur web ou une commande curl pour vérifier que l'application est accessible à l'adresse spécifiée.
-  
+     
+    ![image](https://github.com/user-attachments/assets/5ea327be-3327-41eb-a236-be521794266f)
+
